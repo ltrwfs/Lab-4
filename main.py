@@ -21,6 +21,7 @@ items = {
 items_list = list(items.values())
 items_names = list(items.keys())
 
+
 def gen_table(items, max_volume=MAX_VOLUME):
     table = [[0 for c in range(max_volume)] for _ in range(len(items))]
     for i, (_, value) in enumerate(items.items()):
@@ -42,6 +43,7 @@ def gen_table(items, max_volume=MAX_VOLUME):
                     res = max(new_points, prev_points)
                     table[i][col] = res 
     return table
+
 
 # По таблице определяем, какие предметы взяли и считаем очки выживания
 def define_items(table):
@@ -71,6 +73,7 @@ def define_items(table):
     score += items['d']['points']
     
     return chosen_items, score
+
 
 def pack(items, length=LENGTH, width=WIDTH):
     volumes = {        # Сортируем предметы по объёму
@@ -122,6 +125,7 @@ def pack(items, length=LENGTH, width=WIDTH):
                 volumes[1].pop(0)
 
     return backpack
+
 
 if __name__ == '__main__':
     table = gen_table(items)
