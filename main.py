@@ -1,6 +1,6 @@
 LENGTH = 4
 WIDTH = 2
-MAX_VOLUME = LENGTH*WIDTH - 1        # Вычитаем 1 т.к. берём антидот сразу же
+MAX_VOLUME = LENGTH*WIDTH - 1    # Вычитаем 1 т.к. берём антидот сразу же
 basic_points = 10
 
 items = {
@@ -76,7 +76,7 @@ def define_items(table):
 
 
 def pack(items, length=LENGTH, width=WIDTH):
-    volumes = {        # Сортируем предметы по объёму
+    volumes = {    # Сортируем предметы по объёму
         1: [], 
         2: [], 
         3: [], 
